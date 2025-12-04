@@ -26,7 +26,7 @@ allprojects {
   }
 
   group = "io.github.xxfast"
-  version = "2.0.0"
+  version = "2.0.1"
 
   apply(plugin = "org.jetbrains.kotlin.plugin.serialization")
   apply(plugin = "org.jetbrains.kotlinx.kover")
