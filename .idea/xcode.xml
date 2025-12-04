@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="XcodeMetaData" PROJECT_DIR="$PROJECT_DIR$/sample/app/ios" PROJECT_FILE="$PROJECT_DIR$/sample/app/ios/ios.xcworkspace" />
+  <component name="XcodeMetaData" PROJECT_FILE="$PROJECT_DIR$/sample/app/ios/ios.xcworkspace">
+    <contentRoot DIR="$PROJECT_DIR$/sample/app/ios" />
+  </component>
 </project>
