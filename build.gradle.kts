@@ -1,8 +1,10 @@
 import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+import com.vanniktech.maven.publish.MavenPublishBaseExtension
 
 plugins {
   id("org.jetbrains.kotlinx.kover") version "0.8.2"
   id("org.jetbrains.dokka") version "1.9.20"
+  id("com.vanniktech.maven.publish") version "0.33.0"
 }
 
 buildscript {
@@ -26,13 +28,12 @@ allprojects {
   }
 
   group = "tech.arnav"
-  version = "2.0.1"
+  version = "2.0.2-SNAPSHOT"
 
   apply(plugin = "org.jetbrains.kotlin.plugin.serialization")
   apply(plugin = "org.jetbrains.kotlinx.kover")
   apply(plugin = "org.jetbrains.dokka")
-  apply(plugin = "maven-publish")
-  apply(plugin = "signing")
+  apply(plugin = "com.vanniktech.maven.publish")
 
   extensions.configure<PublishingExtension> {
     repositories {
@@ -56,51 +57,52 @@ allprojects {
       from("${layout.buildDirectory}/dokka")
     }
 
-    publications {
-      withType<MavenPublication> {
-        artifact(javadocJar)
+  }
 
-        pom {
-          name.set("KStore")
-          description.set("A tiny Kotlin multiplatform library that assists in saving and restoring objects to and from disk using kotlinx.coroutines, kotlinx.serialisation and okio")
-          licenses {
-            license {
-              name.set("Apache-2.0")
-              url.set("https://opensource.org/licenses/Apache-2.0")
-            }
-          }
-          url.set("https://xxfast.github.io/KStore/")
-          issueManagement {
-            system.set("Github")
-            url.set("https://github.com/xxfast/KStore/issues")
-          }
-          scm {
-            connection.set("https://github.com/xxfast/KStore.git")
-            url.set("https://github.com/xxfast/KStore")
-          }
-          developers {
-            developer {
-              name.set("Isuru Rajapakse")
-              email.set("isurukusumal36@gmail.com")
-            }
-          }
+  mavenPublishing {
+    // Define your coordinates
+    coordinates("tech.arnav", "kstore2", version.toString())
+
+    pom {
+      name.set("KStore2")
+      description.set("A tiny Kotlin multiplatform library that assists in saving and restoring objects to and from disk using kotlinx.coroutines, kotlinx.serialisation and okio")
+      inceptionYear.set("2025")
+      url.set("https://github.com/championswimmer/kstore")
+      licenses {
+        license {
+          name.set("The Apache License, Version 2.0")
+          url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+          distribution.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
         }
       }
+      issueManagement {
+        system = "Github"
+        url = "https://github.com/xxfast/KStore/issues"
+      }
+      developers {
+        developer {
+          id.set("xxfast")
+          name.set("Isuru Rajapakse")
+          url.set("https://github.com/xxfast")
+        }
+        developer {
+          id.set("championswimmer")
+          name.set("Arnav Gupta")
+          url.set("https://github.com/championswimmer")
+        }
+      }
+      scm {
+        url.set("https://github.com/championswimmer/kstore")
+        connection.set("scm:git:git://github.com/championswimmer/kstore.git")
+        developerConnection.set("scm:git:ssh://git@github.com/championswimmer/kstore.git")
+      }
     }
+
+    // Configure publishing to Maven Central via the new Portal
+    publishToMavenCentral()
+
+    // Enable GPG signing for all publications
+    signAllPublications()
   }
 
-  val publishing = extensions.getByType<PublishingExtension>()
-  extensions.configure<SigningExtension> {
-    useInMemoryPgpKeys(
-      gradleLocalProperties(rootDir).getProperty("gpgKeySecret"),
-      gradleLocalProperties(rootDir).getProperty("gpgKeyPassword"),
-    )
-
-    sign(publishing.publications)
-  }
-
-  // TODO: remove after https://youtrack.jetbrains.com/issue/KT-46466 is fixed
-  project.tasks.withType(AbstractPublishToMaven::class.java).configureEach {
-    dependsOn(project.tasks.withType(Sign::class.java))
-  }
 }
