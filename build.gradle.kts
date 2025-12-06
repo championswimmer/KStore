@@ -28,7 +28,7 @@ allprojects {
   }
 
   group = "tech.arnav"
-  version = "2.0.3"
+  version = "2.0.4"
 
   apply(plugin = "org.jetbrains.kotlin.plugin.serialization")
   apply(plugin = "org.jetbrains.kotlinx.kover")
