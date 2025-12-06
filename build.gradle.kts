@@ -25,7 +25,7 @@ allprojects {
     mavenCentral()
   }
 
-  group = "io.github.xxfast"
+  group = "tech.arnav"
   version = "2.0.1"
 
   apply(plugin = "org.jetbrains.kotlin.plugin.serialization")

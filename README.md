@@ -1,5 +1,9 @@
-# KStore
+# KStore2
 <img src="docs/images/kstore.svg" height="240" align="right"/> 
+
+> **NOTE**: This is fork of [KStore](https://github.com/xxfast/KStore).
+> I forked it mainly to support new new Kotlin [default hierarchy template](https://kotlinlang.org/docs/multiplatform/multiplatform-hierarchy.html#default-hierarchy-template)
+> It shall most likely be temporary once [@xxfast](https://github.com/xxfast) starts mainting the original actively again.
 
 [![Build](https://github.com/xxfast/KStore/actions/workflows/build.yml/badge.svg)](https://github.com/xxfast/KStore/actions/workflows/build.yml)
 
