@@ -61,7 +61,7 @@ allprojects {
 
   mavenPublishing {
     // Define your coordinates
-    coordinates("tech.arnav", "kstore2", version.toString())
+    coordinates("tech.arnav", project.name, version.toString())
 
     pom {
       name.set("KStore2")
@@ -77,7 +77,7 @@ allprojects {
       }
       issueManagement {
         system = "Github"
-        url = "https://github.com/xxfast/KStore/issues"
+        url = "https://github.com/championswimmer/KStore/issues"
       }
       developers {
         developer {
