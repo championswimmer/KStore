@@ -5,11 +5,11 @@
 > I forked it mainly to support new new Kotlin [default hierarchy template](https://kotlinlang.org/docs/multiplatform/multiplatform-hierarchy.html#default-hierarchy-template)
 > It shall most likely be temporary once [@xxfast](https://github.com/xxfast) starts mainting the original actively again.
 
-[![Build](https://github.com/xxfast/KStore/actions/workflows/build.yml/badge.svg)](https://github.com/xxfast/KStore/actions/workflows/build.yml)
+[![Build](https://github.com/championswimmer/KStore/actions/workflows/build.yml/badge.svg)](https://github.com/championswimmer/KStore/actions/workflows/build.yml)
 
 [![Kotlin Beta](https://kotl.in/badges/beta.svg)](https://kotlinlang.org/docs/components-stability.html)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.1.21-blue.svg?style=flat&logo=kotlin)](https://kotlinlang.org)
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.xxfast/kstore?color=blue)](https://search.maven.org/search?q=g:io.github.xxfast)
+[![Maven Central](https://img.shields.io/maven-central/v/tech.arnav/kstore?color=blue)](https://search.maven.org/search?q=g:tech.arnav)
 
 ![badge-android](http://img.shields.io/badge/platform-android-6EDB8D.svg?style=flat)
 ![badge-ios](http://img.shields.io/badge/platform-ios-CDCDCD.svg?style=flat)
@@ -35,24 +35,22 @@ Inspired by [RxStore](https://github.com/Gridstone/RxStore)
 
 ## Installation
 
-KStore is published on Maven Central. Latest version [![Maven Central](https://img.shields.io/maven-central/v/io.github.xxfast/kstore?color=blue)](https://search.maven.org/search?q=g:io.github.xxfast)
+KStore is published on Maven Central. Latest version [![Maven Central](https://img.shields.io/maven-central/v/tech.arnav/kstore?color=blue)](https://search.maven.org/search?q=g:tech.arnav)
 ```kotlin
 repositories { 
-  mavenCentral()
-  // or for snapshot builds
-  maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+  mavenCentral() // should be already there usually
 }
 ```
 
 ```toml
 # for common
-kstore = { module = "io.github.xxfast:kstore", version.ref = "kstore" }
+kstore = { module = "tech.arnav:kstore", version.ref = "kstore" }
 
 # for android, iOS, desktop and nodeJs
-kstore-file = { module = "io.github.xxfast:kstore-file", version.ref = "kstore" }
+kstore-file = { module = "tech.arnav:kstore-file", version.ref = "kstore" }
 
 # for jsBrowser and wasmJsBrowser
-kstore-storage = { module = "io.github.xxfast:kstore-storage", version.ref = "kstore" }
+kstore-storage = { module = "tech.arnav:kstore-storage", version.ref = "kstore" }
 ```
 
 Depending on your target platforms, you will need to add platform configurations [here](https://xxfast.github.io/KStore/installation.html)

@@ -9,16 +9,16 @@ repositories {
 }
 ```
 
-Latest version [![Maven Central](https://img.shields.io/maven-central/v/io.github.xxfast/kstore?color=blue)](https://search.maven.org/search?q=g:io.github.xxfast)
+Latest version [![Maven Central](https://img.shields.io/maven-central/v/tech.arnav/kstore?color=blue)](https://search.maven.org/search?q=g:tech.arnav)
 
 ```toml
 [versions]
 kstore = "x.x.x" 
 
 [libraries]
-kstore = { module = "io.github.xxfast:kstore", version.ref = "kstore" }
-kstore-file = { module = "io.github.xxfast:kstore-file", version.ref = "kstore" }
-kstore-storage = { module = "io.github.xxfast:kstore-storage", version.ref = "kstore" }
+kstore = { module = "tech.arnav:kstore", version.ref = "kstore" }
+kstore-file = { module = "tech.arnav:kstore-file", version.ref = "kstore" }
+kstore-storage = { module = "tech.arnav:kstore-storage", version.ref = "kstore" }
 ```
 
 ### Targeting Android, iOS and/or Desktop 

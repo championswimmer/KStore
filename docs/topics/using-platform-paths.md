@@ -37,9 +37,9 @@ Recommending to use [harawata's appdirs](https://github.com/harawata/appdirs) to
 ```kotlin
 import java.nio.file.FileSystem
 
-const val PACKAGE_NAME = "io.github.xxfast.kstore"
+const val PACKAGE_NAME = "tech.arnav.kstore"
 const val VERSION = "1.0"
-const val ORGANISATION = "xxfast"
+const val ORGANISATION = "arnav"
 
 val filesDir = AppDirsFactory.getInstance().getUserDataDir(PACKAGE_NAME, VERSION, ORGANISATION)
 val cacheDir = AppDirsFactory.getInstance().getUserCacheDir(PACKAGE_NAME, VERSION, ORGANISATION)

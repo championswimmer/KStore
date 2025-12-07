@@ -1,11 +1,11 @@
 # KStore
 <img src="kstore.svg" width="100" alt="logo"/>
 
-[![Build](https://github.com/xxfast/KStore/actions/workflows/build.yml/badge.svg)](https://github.com/xxfast/KStore/actions/workflows/build.yml)
+[![Build](https://github.com/championswimmer/KStore/actions/workflows/build.yml/badge.svg)](https://github.com/championswimmer/KStore/actions/workflows/build.yml)
 
 [![Kotlin Alpha](https://kotl.in/badges/alpha.svg)](https://kotlinlang.org/docs/components-stability.html)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.0.10-blue.svg?style=flat&logo=kotlin)](https://kotlinlang.org)
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.xxfast/kstore?color=blue)](https://search.maven.org/search?q=g:io.github.xxfast)
+[![Maven Central](https://img.shields.io/maven-central/v/tech.arnav/kstore?color=blue)](https://search.maven.org/search?q=g:tech.arnav)
 
 ![badge-android](http://img.shields.io/badge/platform-android-6EDB8D.svg?style=flat)
 ![badge-ios](http://img.shields.io/badge/platform-ios-CDCDCD.svg?style=flat)
@@ -52,7 +52,7 @@ val pets: Flow<Pet?> = store.updates
 
 <seealso style="cards">
   <category ref="external">
-    <a href="https://github.com/xxfast/KStore">GitHub</a>
-    <a href="https://xxfast.github.io/KStore/api/">API Doc</a>
+    <a href="https://github.com/championswimmer/KStore">GitHub</a>
+    <a href="https://championswimmer.github.io/KStore/api/">API Doc</a>
   </category>
 </seealso>
